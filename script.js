@@ -3,8 +3,8 @@
 //Selecting elements
 const player0El = document.querySelector('.player--0');
 const player1El = document.querySelector('.player--1');
+//getElementById same as querySelector but it's made for the id
 const score0El = document.querySelector('#score--0');
-//getElementById same as querySelector but it made for the id
 const score1El = document.getElementById('score--1');
 const diceEl = document.querySelector('.dice');
 const btnNew = document.querySelector('.btn--new');
@@ -39,7 +39,6 @@ btnRoll.addEventListener('click', function () {
     //2.Display dice
     diceEl.classList.remove('hidden');
     diceEl.src = `dice-${dice}.png`;
-    //   console.log(dice);
 
     //3. Check for rolled dice 1
     if (dice !== 1) {
@@ -63,7 +62,7 @@ btnHold.addEventListener('click', function () {
       scores[activePlayer];
 
     //2.Check if player's score is >=100
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= 100) {
       //Finish the game
       playing = false;
       diceEl.classList.add('hidden');
